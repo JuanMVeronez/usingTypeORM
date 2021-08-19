@@ -1,0 +1,13 @@
+{
+  "name": "apolo-backend",
+  "version": "1.0.0",
+  "description": "A backend project to permit users login in the application, create shared notes and group this notes using tags",
+  "main": "src/server.ts",
+  "author": "Juan Veronez <juan.monteirov@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "",
+    "start": "",
+    "test": ""
+  }
+}
