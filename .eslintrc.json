@@ -31,6 +31,7 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "no-mixed-spaces-and-tabs": [0, "smart-tabs"]
     }
 }

@@ -1,16 +1,16 @@
-import { sum } from "@modules/testing";
 import express from "express";
+import  "reflect-metadata";
+
+import "./database/connect";
+import router from "./routes/routes";
 
 const app = express();
 
-app.get("/", (req, res) => {
-  
-  
-	res.send("It's ok!");
-});
+app.use(express.json());
+app.use(router);
 
 app.listen(3333, () => {
 	console.log("Server Working 🔥");
 });
 
-sum(1,1)
+export default app;

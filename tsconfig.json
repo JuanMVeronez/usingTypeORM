@@ -19,10 +19,10 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@controllers/*": ["./src/controllers/*"],
-      "@modules/*": ["./src/modules/*"],
-      "@models/*": ["./src/models/*"],
-      "@databases/*": ["./src/databases/*"]
+      "@controllers/*": ["./src/app/controllers/*"],
+      "@modules/*": ["./src/app/modules/*"],
+      "@models/*": ["./src/app/models/*"],
+      "@database/*": ["./src/database/*"]
     }
   },
   "include": [
