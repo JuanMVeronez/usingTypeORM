@@ -1,5 +1,18 @@
-import {createConnection} from "typeorm";
+import {Connection, createConnection} from "typeorm";
 
-createConnection()
-	.then(() => {console.log("Connection established 📦");})
-	.catch(err => console.log(`Error ocurred: ${err}`));
+export default class DatabaseConnection {
+	database: Connection;
+
+	async connect(): Promise<Connection> {
+		this.database = await createConnection();
+		return this.database;
+	}
+
+	async disconnect(): Promise<void> {
+		return await this.database.close();	
+	}
+
+	get isConnected(): boolean {
+		return this.database.isConnected;
+	}
+}

@@ -1,7 +1,7 @@
 import express from "express";
 import  "reflect-metadata";
 
-import "./database/connect";
+import DatabaseConnection from "./database/connect";
 import router from "./routes/routes";
 
 const app = express();
@@ -13,4 +13,5 @@ app.listen(3333, () => {
 	console.log("Server Working 🔥");
 });
 
+export const database = new DatabaseConnection().connect();
 export default app;

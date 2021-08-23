@@ -1,5 +1,5 @@
 import UserCreationError from "../../../../errors/UserCreationError";
-import IUser from "@modules/authentication/IUser";
+import IUser from "@modules/auth/IUser";
 import { ICreateUserRepository} from "@database/auth/CreateUserRepository";
 
 export default class CreateUserService {

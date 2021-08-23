@@ -1,6 +1,6 @@
 import { getRepository, Repository } from "typeorm";
 
-import IUser from "@modules/authentication/IUser";
+import IUser from "@modules/auth/IUser";
 import { User } from "@models/Users";
 
 export interface ICreateUserRepository {

@@ -1,4 +1,4 @@
-import createUserFactory from "@modules/authentication/createUser/CreateUserFactory";
+import createUserFactory from "@modules/auth/createUser/CreateUserFactory";
 import { Router } from "express";
 
 const router = Router();

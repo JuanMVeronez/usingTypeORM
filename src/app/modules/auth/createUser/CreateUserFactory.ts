@@ -1,4 +1,4 @@
-import CreateUserController from "@controllers/auth/CreateUserController";
+import CreateUserController from "@modules/auth/createUser/CreateUserController";
 import { CreateUserRepository } from "@database/auth/CreateUserRepository";
 import CreateUserService from "./CreateUserService";
 

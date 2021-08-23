@@ -1,5 +1,5 @@
-import IUser from "@modules/authentication/IUser";
-import CreateUserService from "@modules/authentication/createUser/CreateUserService";
+import IUser from "@modules/auth/IUser";
+import CreateUserService from "@modules/auth/createUser/CreateUserService";
 import { Request, Response } from "express";
 import UserCreationError from "src/errors/UserCreationError";
 
