@@ -1,7 +1,7 @@
 import DatabaseConnection from "./connect";
 
 test("Can connect with database", async () => {
-	const db = new DatabaseConnection();
+	const db = new DatabaseConnection("usersRepo");
 	
 	try {
 		await db.connect();

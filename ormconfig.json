@@ -1,17 +1,38 @@
-{
-  "type": "mysql",
-  "host": "localhost",
-  "port": 3306,
-  "username": "dev",
-  "password": "dev-password",
-  "database": "users",
-  "entities": [
-     "src/app/models/**/*.ts"
-  ],
-  "migrations": [
-     "src/database/migrations/**/*.ts"
-  ],
-  "cli" : {
-    "migrationsDir" : "src/database/migrations"
+[
+  {
+    "default": true,
+    "name": "usersRepo",
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "dev",
+    "password": "dev-password",
+    "database": "users",
+    "entities": [
+      "src/app/models/**/*.ts"
+    ],
+    "migrations": [
+      "src/database/migrations/**/*.ts"
+    ],
+    "cli" : {
+      "migrationsDir" : "src/database/migrations"
+    }
+  },
+  {
+    "name": "usersTest",
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "dev",
+    "password": "dev-password",
+    "database": "tests",
+    "dropSchema": true,
+    "migrationsRun": true,
+    "entities": [
+      "src/app/models/**/*.ts"
+    ],
+    "migrations": [
+      "src/database/migrations/**/*.ts"
+    ]
   }
-}
+]

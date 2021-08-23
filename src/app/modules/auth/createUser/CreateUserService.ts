@@ -5,9 +5,9 @@ import { ICreateUserRepository} from "@database/auth/CreateUserRepository";
 export default class CreateUserService {
 	constructor(private createUserRepository: ICreateUserRepository) {}
 
-	async execute(user: IUser): Promise<IUser | Error> {
-		const userAlredyExist = await this.createUserRepository.exists(user.id);
-
+	async execute(user: IUser): Promise<IUser> {
+		const userAlredyExist = await this.createUserRepository.exists(user.email);
+		
 		if (userAlredyExist) {
 			throw new UserCreationError("User alredy already exists");
 		}

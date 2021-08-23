@@ -11,12 +11,12 @@ export interface ICreateUserRepository {
 export class CreateUserRepository implements ICreateUserRepository {
 	private repository: Repository<User>;
 
-	constructor() {
-		this.repository = getRepository(User);
+	constructor(repoName: string) {
+		this.repository = getRepository(User, repoName);
 	}
   
-	async exists(id: string): Promise<boolean> {
-		const user = await this.repository.findOne(id);
+	async exists(email: string): Promise<boolean> {
+		const user = await this.repository.findOne({ email});
 		return !!user;
 	}
   

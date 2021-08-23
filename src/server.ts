@@ -13,5 +13,6 @@ app.listen(3333, () => {
 	console.log("Server Working 🔥");
 });
 
-export const database = new DatabaseConnection().connect();
+export const database = new DatabaseConnection("usersRepo").connect();
+new DatabaseConnection("usersTest").connect();
 export default app;
