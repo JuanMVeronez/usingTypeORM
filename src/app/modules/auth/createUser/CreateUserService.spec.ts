@@ -4,10 +4,11 @@ import DatabaseConnection from "@database/connect";
 import CreateUserService from "./CreateUserService";
 
 describe("User creation tests", () => {
-	const db = new DatabaseConnection("usersTest");
+	let db: DatabaseConnection;
 	let createUser: CreateUserService;
 
 	beforeAll(async () => {
+		db = new DatabaseConnection("usersTest");
 		await db.connect();
 
 		const userRepository = new CreateUserRepository("usersTest");
